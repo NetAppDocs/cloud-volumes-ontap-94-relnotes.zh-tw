@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: reference-new.html 
+keywords: 'what"s new, new, features, release notes, enhancements' 
+summary: 全新版本Cloud Volumes ONTAP 的功能介紹全新功能、增強功能及錯誤修復。 
+---
+= 更新功能Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+包含多項新功能與增強功能。Cloud Volumes ONTAP
+
+
+NOTE: 最新版Cloud Manager也會提供其他功能與增強功能。請參閱 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager版本資訊"^] 以取得詳細資料。
+
+
+
+== 支援AWS GovCloud（美國）地區的隨用隨付
+
+AWS GovCloud（美國）區域現在支援隨用隨付版本Cloud Volumes ONTAP 的功能。這是Cloud Volumes ONTAP 除了支援GovCloud（美國）地區的BYOL之外。
+
+您可以像Cloud Volumes ONTAP 任何其他地區一樣、在GovCloud（美國）區域部署功能區。前往NetApp Cloud Central、在GovCloud（美國）上啟動Cloud Manager。然後在Cloud Volumes ONTAP Cloud Manager中建立新的工作環境、以啟動「功能更新」或「BYOL」。
+
+
+
+== 利用Cloud Volumes ONTAP 功能不再是功能不一的功能
+
+9.2版在效能層（SSD或HDD）與容量層（物件儲存區）之間引進自動化資料分層。傳送至容量層的Cold資料包括讀寫磁碟區的Snapshot複本（_Snapshot only _分層原則）或目的地磁碟區的資料（_backup_分層原則）。
+
+有了《Sich9.4 Premium and BYOL：第三個選項：您可以使用_auto_分層原則、將讀寫磁碟區中的冷資料區塊分層至容量層。Cloud Volumes ONTAPCold 資料不僅包括 Snapshot 複本、也包括來自作用中檔案系統的冷使用者資料。
+
+如果以隨機讀取方式讀取、容量層中的冷資料區塊就會變熱、並移至效能層。如果以連續讀取方式讀取（例如與索引和防毒掃描相關的讀取）、則冷資料區塊會保持冷卻狀態、而不會移至效能層級。
+
+在Cloud Manager中建立或編輯Volume時、您可以選擇分層原則。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Cloud Manager文件"]。
+
+
+
+== Microsoft Azure中的資料分層
+
+您現在可以將熱資料的效能層（優質或標準託管磁碟）與冷資料的容量層（Azure Blob儲存設備）結合、來降低Azure儲存成本。Azure也支援AWS所支援的相同分層原則：自動、僅Snapshot和備份。
+
+
+NOTE: DS3_v2虛擬機器類型不支援資料分層。
+
+在Cloud Manager中建立或編輯Volume時、您可以選擇分層原則。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Cloud Manager文件"]。
+
+
+
+== 使用已配置的IOPS SSD進行資料分層
+
+AWS現在支援使用已配置的IOPS SSD進行資料分層。您可以使用這些SSD做為熱資料的效能層、Amazon S3做為冷資料的容量層。
+
+
+
+== 提升分層資料的效能
+
+9.2和9.3版本中引進的增強寫入效能、現在可透過將Cold資料分層至物件存放區容量層的磁碟區來獲得支援。這適用於Cloud Volumes ONTAP 在更新的SSD Aggregate上建立的磁碟區（位於更新的更新版）。
+
+
+
+== 改善AWS多重工作負載的效能
+
+現在、在AWS中有額外的網路頻寬、可為具有多個工作負載的系統提供更好的效能。Cloud Volumes ONTAP當您升級至9.4版並啟動新的9.4版系統時、下列EC2執行個體類型可獲得額外頻寬：
+
+* m4.xlarge
+* m4.2xLarge
+* m4.4xlarge
+* c4.4xlarge
+* c4.8xlarge
+
+
+
+
+== 不再支援EC2執行個體類型
+
+所有版本Cloud Volumes ONTAP 的不再支援多種EC2執行個體類型。執行這些執行個體類型的現有系統將繼續正常運作、不過NetApp強烈建議變更為不同的執行個體類型。
+
+若要檢閱執行個體類型與NetApp授權之間的定價差異、請前往AWS Marketplace for http://aws.amazon.com/marketplace/pp/B011KEZ734["單節點系統"^] 以及for http://aws.amazon.com/marketplace/pp/B01H4LVJ84["HA 配對"^]。
+
+[cols="2*"]
+|===
+| 不再支援執行個體類型 | 建議的執行個體類型 
+
+
+| c3.2xLarge | m4.xlarge 
+
+
+| c4.2xLarge | m4.2xLarge 
+
+
+| m3.xlarge | m4.xlarge 
+
+
+| m3.2xLarge | m4.2xLarge 
+
+
+| r3.xlarge | m4.2xLarge 
+
+
+| r3.2xlarge | r4.2xlarge 
+|===
+
+TIP: M3和R3執行個體類型不支援資料分層和增強效能、因此移至M4和R4執行個體類型可讓您充分利用Cloud Volumes ONTAP 這些功能。
+
+
+
+== 升級附註
+
+* 必須從 Cloud Manager 完成升級。 Cloud Volumes ONTAP您不應 Cloud Volumes ONTAP 使用 System Manager 或 CLI 來升級功能。這樣做可能會影響系統穩定性。
+* 您可以從Cloud Volumes ONTAP 9.3版本升級至版本的版本更新至版本的版本。
++
+若要瞭解版本需求、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html["VMware Update文檔：叢集更新要求ONTAP"^]。
+
+* 單一節點系統的升級可讓系統離線長達25分鐘、在此期間I/O會中斷。
+* 升級 HA 配對不中斷營運、而且 I/O 不中斷。在此不中斷營運的升級程序中、會同時升級每個節點、以繼續為用戶端提供 I/O 服務。
+
