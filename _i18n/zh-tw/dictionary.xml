@@ -213,10 +213,6 @@
   <block id="602b56cc8e56a5daf341c7f6b5489c76" category="list-text">啟用Cloud Volumes ONTAP 了「實體加密」的系統不支援LUN搬移。</block>
   <block id="ad36e2b4d23122ce393299ac3f5e4d18" category="list-text">即使是無法建立的集合體、也會將加密金鑰傳送給金鑰管理程式。Cloud Volumes ONTAP</block>
   <block id="e6cd7708d37be14be1ec14b31818d9c9" category="paragraph">您必須從金鑰管理程式手動刪除金鑰。</block>
-  <block id="2d03060cc88d48d8c65d3a01864614ad" category="section-title">Microsoft Azure的已知限制</block>
-  <block id="d0e7588890233fc627c7bcaab1e75386" category="paragraph">下列已知限制會影響Cloud Volumes ONTAP Azure中的功能。</block>
-  <block id="e4f5b6f59db7bfa0e08c02262ddbd654" category="section-title">CSP合作夥伴無法使用「隨用隨付」</block>
-  <block id="f2ff5834d93c258f0fc4ad6cf6a17942" category="paragraph">如果您是Microsoft Cloud Solution Provider（CSP）合作夥伴、則無法部署Cloud Volumes ONTAP SfExplore、Standard或Premium、因為CSP合作夥伴無法使用隨用付費訂閱。您必須購買授權並部署Cloud Volumes ONTAP BYOL。</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律聲明提供版權聲明、商標、專利等存取權限。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
@@ -290,4 +286,6 @@
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">解決方案ONTAP</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
+  <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">對於HA、每個節點或整個HA配對的授權容量限制是多少？</block>
+  <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">對於AWS中的HA系統、鏡射資料是否會根據容量限制計算？</block>
 </blocks>

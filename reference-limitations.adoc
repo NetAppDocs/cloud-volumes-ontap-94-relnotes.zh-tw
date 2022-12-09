@@ -126,15 +126,3 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 您必須從金鑰管理程式手動刪除金鑰。
 
 
-
-
-
-== Microsoft Azure的已知限制
-
-下列已知限制會影響Cloud Volumes ONTAP Azure中的功能。
-
-
-
-=== CSP合作夥伴無法使用「隨用隨付」
-
-如果您是Microsoft Cloud Solution Provider（CSP）合作夥伴、則無法部署Cloud Volumes ONTAP SfExplore、Standard或Premium、因為CSP合作夥伴無法使用隨用付費訂閱。您必須購買授權並部署Cloud Volumes ONTAP BYOL。

@@ -22,7 +22,7 @@ summary: 提供可靠作業的儲存組態限制。Cloud Volumes ONTAP為獲得�
 
 整個系統的最大容量Cloud Volumes ONTAP 取決於其授權。最大系統容量包括磁碟型儲存設備、以及用於資料分層的物件式儲存設備。NetApp不支援超過此限制。
 
-在Azure中、磁碟限制會讓您無法單獨使用磁碟、達到3668 TiB容量限制。在這些情況下、您可以達到3668 TiB容量上限 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["將非作用中資料分層至物件儲存設備"^]。請參閱  and disk limits by Azure VM size,Azure VM大小的容量與磁碟限制 以取得更多詳細資料。
+在Azure中、磁碟限制會讓您無法單獨使用磁碟、達到3668 TiB容量限制。在這些情況下、您可以達到3668 TiB容量上限 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["將非作用中資料分層至物件儲存設備"^]。請參閱 <<Azure VM大小的容量與磁碟限制,Azure VM大小的容量與磁碟限制>> 以取得更多詳細資料。
 
 [cols="30,70"]
 |===
@@ -40,8 +40,10 @@ summary: 提供可靠作業的儲存組態限制。Cloud Volumes ONTAP為獲得�
 
 | BYOL | 每個授權368TiB 
 |===
+.對於HA、每個節點或整個HA配對的授權容量限制是多少？
 容量限制適用於整個HA配對。不是每個節點。例如、如果您使用Premium授權、則兩個節點之間最多可有368TiB的容量。
 
+.對於AWS中的HA系統、鏡射資料是否會根據容量限制計算？
 不、這不需要。AWS HA配對中的資料會在節點之間同步鏡射、以便在發生故障時提供資料。例如、如果您在節點A上購買8個TiB磁碟、Cloud Manager也會在節點B上配置8個TiB磁碟、用於鏡射資料。雖然已配置16個TiB容量、但根據授權上限只計算8個TiB。
 
 
@@ -101,7 +103,7 @@ summary: 提供可靠作業的儲存組態限制。Cloud Volumes ONTAP為獲得�
 | 最大磁碟大小 | 32 TiB 
 
 
-| 所有集合體中的資料磁碟數目上限^3^ | 視VM大小而定。  and disk limits by Azure VM size,請參閱以下內容。 
+| 所有集合體中的資料磁碟數目上限^3^ | 視VM大小而定。 <<Azure VM大小的容量與磁碟限制,請參閱以下內容>>。 
 
 
 | * RAID群組* | 每個Aggregate的上限 | 1. 
