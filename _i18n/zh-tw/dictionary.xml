@@ -52,7 +52,6 @@
   <block id="7de15f2416b1b598e771303381d1179e" category="paragraph">整個系統的最大容量Cloud Volumes ONTAP 取決於其授權。最大系統容量包括磁碟型儲存設備、以及用於資料分層的物件式儲存設備。NetApp不支援超過此限制。</block>
   <block id="ba23388576c937a1743b84554bd13c72" category="inline-link">將非作用中資料分層至物件儲存設備</block>
   <block id="68044ff775bca3f2082575f699cbc902" category="inline-xref">Azure VM大小的容量與磁碟限制</block>
-  <block id="c994e6c52f939ebf1482f0a7bead9479" category="paragraph">在Azure中、磁碟限制會讓您無法單獨使用磁碟、達到3668 TiB容量限制。在這些情況下、您可以達到3668 TiB容量上限<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。請參閱 <block ref="3e9c678258f956964e9e70e5427a6e55" category="inline-xref-macro-rx"></block> 以取得更多詳細資料。</block>
   <block id="794df3791a8c800841516007427a2aa3" category="cell">授權</block>
   <block id="643a529396d04bbbe61c8daa70456163" category="cell">最大系統容量（磁碟+物件儲存）</block>
   <block id="768560d8110ed230b7fde848941af107" category="cell">2 TiB（Explore不支援資料分層）</block>
@@ -235,7 +234,6 @@
   <block id="51725349a7337e60469d7cccc2aa4017" category="doc">更新功能Cloud Volumes ONTAP</block>
   <block id="bc6fd8b4572c0d9cd26584917775df84" category="paragraph">包含多項新功能與增強功能。Cloud Volumes ONTAP</block>
   <block id="f9d74313da16b2bb412c1d7c5efd0534" category="inline-link">Cloud Manager版本資訊</block>
-  <block id="62703524dbb4d20326585184b2149d4d" category="admonition">最新版Cloud Manager也會提供其他功能與增強功能。請參閱<block ref="b168941a5dc7eab411ef9dc2c7a220db" category="inline-link-rx"></block> 以取得詳細資料。</block>
   <block id="a0d6ea344f41a73691547cd17889b4b1" category="section-title">支援AWS GovCloud（美國）地區的隨用隨付</block>
   <block id="7a0440e5d3634075e4065867569b8cbb" category="paragraph">AWS GovCloud（美國）區域現在支援隨用隨付版本Cloud Volumes ONTAP 的功能。這是Cloud Volumes ONTAP 除了支援GovCloud（美國）地區的BYOL之外。</block>
   <block id="7bf74dbe7639ffdd77d936ec9cba8562" category="paragraph">您可以像Cloud Volumes ONTAP 任何其他地區一樣、在GovCloud（美國）區域部署功能區。前往NetApp Cloud Central、在GovCloud（美國）上啟動Cloud Manager。然後在Cloud Volumes ONTAP Cloud Manager中建立新的工作環境、以啟動「功能更新」或「BYOL」。</block>
@@ -244,7 +242,6 @@
   <block id="d79a3dfd452a27cb0c6ad9842942655a" category="paragraph">有了《Sich9.4 Premium and BYOL：第三個選項：您可以使用_auto_分層原則、將讀寫磁碟區中的冷資料區塊分層至容量層。Cloud Volumes ONTAPCold 資料不僅包括 Snapshot 複本、也包括來自作用中檔案系統的冷使用者資料。</block>
   <block id="cd092c954573d47ecd37b6e5d96c0c03" category="paragraph">如果以隨機讀取方式讀取、容量層中的冷資料區塊就會變熱、並移至效能層。如果以連續讀取方式讀取（例如與索引和防毒掃描相關的讀取）、則冷資料區塊會保持冷卻狀態、而不會移至效能層級。</block>
   <block id="b3a853d57fdef5749cc6f40650ebaac6" category="inline-link">Cloud Manager文件</block>
-  <block id="6ceaaf7fac040dc75bf48fc6caccc8a6" category="paragraph">在Cloud Manager中建立或編輯Volume時、您可以選擇分層原則。如需詳細資訊、請參閱<block ref="264e5f790f4e4561900fb0ba416bb537" category="inline-link-rx"></block>。</block>
   <block id="fc4ac16b85d775e7fb2b115e9433ac1c" category="section-title">Microsoft Azure中的資料分層</block>
   <block id="5cb28c8ee8d4e8e76b6d9d79a4b1669f" category="paragraph">您現在可以將熱資料的效能層（優質或標準託管磁碟）與冷資料的容量層（Azure Blob儲存設備）結合、來降低Azure儲存成本。Azure也支援AWS所支援的相同分層原則：自動、僅Snapshot和備份。</block>
   <block id="ad53146232e9199d7c72c376fd874df4" category="section-title">使用已配置的IOPS SSD進行資料分層</block>
@@ -285,7 +282,10 @@
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">解決方案ONTAP</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">對於HA、每個節點或整個HA配對的授權容量限制是多少？</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">對於AWS中的HA系統、鏡射資料是否會根據容量限制計算？</block>
+  <block id="46db5b29a56ccaf5d1f79e4bbe4aae89" category="paragraph">在Azure中、磁碟限制會讓您無法單獨使用磁碟、達到3668 TiB容量限制。在這些情況下、您可以達到3668 TiB容量上限<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。請參閱 <block ref="3e9c678258f956964e9e70e5427a6e55" category="inline-xref-macro-rx"></block> 以取得更多詳細資料。</block>
+  <block id="6d43452380cd21cb4417b9a1824c3ac4" category="admonition">最新版Cloud Manager也會提供其他功能與增強功能。請參閱<block ref="ae983c0a7ee8a786f01e9cc8530d422b" category="inline-link-rx"></block> 以取得詳細資料。</block>
+  <block id="952b4eed8b943005d4741823b952e0f8" category="paragraph">在Cloud Manager中建立或編輯Volume時、您可以選擇分層原則。如需詳細資訊、請參閱<block ref="21af1e2086b593ece92c4b9786979343" category="inline-link-rx"></block>。</block>
+  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文件</block>
 </blocks>

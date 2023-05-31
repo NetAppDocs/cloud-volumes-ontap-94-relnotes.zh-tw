@@ -17,7 +17,7 @@ summary: 全新版本Cloud Volumes ONTAP 的功能介紹全新功能、增強功
 包含多項新功能與增強功能。Cloud Volumes ONTAP
 
 
-NOTE: 最新版Cloud Manager也會提供其他功能與增強功能。請參閱 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager版本資訊"^] 以取得詳細資料。
+NOTE: 最新版Cloud Manager也會提供其他功能與增強功能。請參閱 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Manager版本資訊"^] 以取得詳細資料。
 
 
 
@@ -37,7 +37,7 @@ AWS GovCloud（美國）區域現在支援隨用隨付版本Cloud Volumes ONTAP 
 
 如果以隨機讀取方式讀取、容量層中的冷資料區塊就會變熱、並移至效能層。如果以連續讀取方式讀取（例如與索引和防毒掃描相關的讀取）、則冷資料區塊會保持冷卻狀態、而不會移至效能層級。
 
-在Cloud Manager中建立或編輯Volume時、您可以選擇分層原則。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Cloud Manager文件"]。
+在Cloud Manager中建立或編輯Volume時、您可以選擇分層原則。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["Cloud Manager文件"]。
 
 
 
@@ -48,7 +48,7 @@ AWS GovCloud（美國）區域現在支援隨用隨付版本Cloud Volumes ONTAP 
 
 NOTE: DS3_v2虛擬機器類型不支援資料分層。
 
-在Cloud Manager中建立或編輯Volume時、您可以選擇分層原則。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Cloud Manager文件"]。
+在Cloud Manager中建立或編輯Volume時、您可以選擇分層原則。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["Cloud Manager文件"]。
 
 
 
