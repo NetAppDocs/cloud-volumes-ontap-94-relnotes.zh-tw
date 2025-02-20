@@ -45,7 +45,6 @@
   <block id="d6b23a41a85f490ae75b43cb4095d8c0" category="list-text">使用Azure Premium Storage磁碟時會啟用增強寫入效能、但使用DS3_v2虛擬機器類型時則不會啟用。</block>
   <block id="7c7627c6477255acb2239bd1be90f346" category="list-text">如需Azure地區支援、請參閱<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="7d9b2b78909e33445be41b4ae9f344ee" category="summary">這些版本說明Cloud Volumes ONTAP 介紹有關更新功能、限制和已知問題的資訊。</block>
-  <block id="a7c547126254140f4fce2f237d58af44" category="doc">《》發行說明Cloud Volumes ONTAP</block>
   <block id="b3dfe19c7d46d1f8795ac17bf3d5a909" category="summary">提供可靠作業的儲存組態限制。Cloud Volumes ONTAP為獲得最佳效能、請勿將系統設定為最大值。</block>
   <block id="150a34e7bbdf7765066eae5fadb9f919" category="doc">儲存限制</block>
   <block id="ecedb9353641e4bd058af0268a6edce8" category="section-title">依授權提供的最大系統容量</block>
@@ -266,7 +265,6 @@
   <block id="2df1c9d0478b77578215d5f855edbdab" category="paragraph">若要瞭解版本需求、請參閱<block ref="d385165ea9dec58fc6f926768e800163" category="inline-link-rx"></block>。</block>
   <block id="9f0f02784feedfa2549a9e3a51cfa315" category="list-text">單一節點系統的升級可讓系統離線長達25分鐘、在此期間I/O會中斷。</block>
   <block id="00795e3f043d0bab791590ffc0257204" category="list-text">升級 HA 配對不中斷營運、而且 I/O 不中斷。在此不中斷營運的升級程序中、會同時升級每個節點、以繼續為用戶端提供 I/O 服務。</block>
-  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">版本資訊首頁</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
   <block id="e19968c5ebc4b94a271992f4b0563be8" category="sidebar">組態與限制</block>
@@ -275,15 +273,12 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central部落格</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
-  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">解決方案ONTAP</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896 TiB</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">對於HA、每個節點或整個HA配對的授權容量限制是多少？</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">對於AWS中的HA系統、鏡射資料是否會根據容量限制計算？</block>
   <block id="46db5b29a56ccaf5d1f79e4bbe4aae89" category="paragraph">在Azure中、磁碟限制會讓您無法單獨使用磁碟、達到3668 TiB容量限制。在這些情況下、您可以達到3668 TiB容量上限<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。請參閱 <block ref="3e9c678258f956964e9e70e5427a6e55" category="inline-xref-macro-rx"></block> 以取得更多詳細資料。</block>
   <block id="6d43452380cd21cb4417b9a1824c3ac4" category="admonition">最新版Cloud Manager也會提供其他功能與增強功能。請參閱<block ref="ae983c0a7ee8a786f01e9cc8530d422b" category="inline-link-rx"></block> 以取得詳細資料。</block>
   <block id="952b4eed8b943005d4741823b952e0f8" category="paragraph">在Cloud Manager中建立或編輯Volume時、您可以選擇分層原則。如需詳細資訊、請參閱<block ref="21af1e2086b593ece92c4b9786979343" category="inline-link-rx"></block>。</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文件</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -292,4 +287,5 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="a61a85744fee28d1b209cdce2108ab2b" category="sidebar">Cloud Volumes ONTAP 9.4 版本資訊</block>
 </blocks>
